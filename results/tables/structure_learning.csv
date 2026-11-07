@@ -1,0 +1,7 @@
+domain,held-out structure,BIC structure,val LL/person (held-out),val LL/person (BIC),composition params,outcome coefficients
+CA18,"P(R)  P(X|R)  P(C|R,X)  P(E|R,X,C)  P(W|R,X,C,O)  P(O|R,X,C,E)  P(H|R,X,C,O)","P(R)  P(X|R)  P(C|R,X)  P(E|R,X,C)  P(W|R,X,O)  P(O|R,X,E)  P(H|R,X,C)",-8.47270140588812,-8.546013919541778,7919,75
+TX18,"P(R)  P(X|R)  P(C|R,X)  P(E|R,X,C)  P(W|R,X,C,O)  P(O|R,X,C,E)  P(H|R,X,C,O)","P(R)  P(X|R)  P(C|R,X)  P(E|R,X,C)  P(W|R,X,O)  P(O|R,X,E)  P(H|R,X,C)",-8.079479687293443,-8.14122859054137,7919,75
+NY18,"P(R)  P(X|R)  P(C|R,X)  P(E|R,X,C)  P(W|R,X,C,O)  P(O|R,X,C,E)  P(H|R,X,C,O)","P(R)  P(X|R)  P(C|R,X)  P(E|R,X,C)  P(W|R,X,O)  P(O|R,X,E)  P(H|R,X,C)",-8.354292730260479,-8.417184984993552,7919,75
+CA19,"P(R)  P(X|R)  P(C|R,X)  P(E|R,X,C)  P(W|R,X,C,O)  P(O|R,X,C,E)  P(H|R,X,C,O)","P(R)  P(X|R)  P(C|R,X)  P(E|R,X,C)  P(W|R,X,O)  P(O|R,X,E)  P(H|R,X,C)",-8.507247168169194,-8.580413156473519,7919,75
+TX19,"P(R)  P(X|R)  P(C|R,X)  P(E|R,X,C)  P(W|R,X,C,O)  P(O|R,X,C,E)  P(H|R,X,C,O)","P(R)  P(X|R)  P(C|R,X)  P(E|R,X,C)  P(W|R,X,O)  P(O|R,X,E)  P(H|R,X,C)",-8.0948827846348,-8.152799007283557,7919,75
+NY19,"P(R)  P(X|R)  P(C|R,X)  P(E|R,X,C)  P(W|R,X,C,O)  P(O|R,X,C,E)  P(H|R,X,C,O)","P(R)  P(X|R)  P(C|R,X)  P(E|R,X,C)  P(W|R,X,O)  P(O|R,X,E)  P(H|R,X,C)",-8.38268240475988,-8.444466257215135,7919,75

@@ -1,0 +1,37 @@
+scenario,n,selector,recall,false selections,exact match
+composition,200,LFA,0.12,0.12,0.12
+composition,200,LFA +U,1.0,0.88,0.12
+composition,200,LL,0.12,0.12,0.12
+composition,1000,LFA,0.62,0.0,0.62
+composition,1000,LFA +U,1.0,1.0,0.0
+composition,1000,LL,0.62,0.0,0.62
+demographic,200,LFA,1.0,0.38,0.62
+demographic,200,LFA +U,0.88,1.0,0.12
+demographic,200,LL,1.0,0.38,0.62
+demographic,1000,LFA,1.0,0.12,0.88
+demographic,1000,LFA +U,0.88,1.12,0.0
+demographic,1000,LL,1.0,0.12,0.88
+mechanism,200,LFA,0.0,0.12,0.0
+mechanism,200,LFA +U,0.0,1.38,0.0
+mechanism,200,LL,0.0,0.12,0.0
+mechanism,1000,LFA,1.0,0.12,0.88
+mechanism,1000,LFA +U,1.0,1.0,0.0
+mechanism,1000,LL,1.0,0.12,0.88
+mixed,200,LFA,0.19,0.12,0.0
+mixed,200,LFA +U,0.69,0.62,0.38
+mixed,200,LL,0.19,0.12,0.0
+mixed,1000,LFA,0.75,0.0,0.62
+mixed,1000,LFA +U,0.94,0.12,0.88
+mixed,1000,LL,0.75,0.0,0.62
+null,200,LFA,,0.5,0.5
+null,200,LFA +U,,1.38,0.12
+null,200,LL,,0.5,0.5
+null,1000,LFA,,0.12,0.88
+null,1000,LFA +U,,1.5,0.0
+null,1000,LL,,0.12,0.88
+unselected,200,LFA,0.21,0.0,0.0
+unselected,200,LFA +U,0.67,0.0,0.0
+unselected,200,LL,0.21,0.0,0.0
+unselected,1000,LFA,0.67,0.0,0.0
+unselected,1000,LFA +U,0.67,0.0,0.0
+unselected,1000,LL,0.67,0.0,0.0

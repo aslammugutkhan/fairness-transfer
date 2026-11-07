@@ -1,0 +1,37 @@
+# Data: downloaded and filtered ACS microdata stay local (the notebook re-downloads them; checksums are committed)
+data/raw/
+data/processed/
+*.zip
+*.pkl
+*.part
+
+# Non-reported runs (RUN_MODE = "quick")
+results_quick/
+
+# Environments, caches, editors
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# LaTeX intermediates (compiled PDFs are committed)
+report/*.aux
+report/*.log
+report/*.out
+slides/*.aux
+slides/*.log
+slides/*.nav
+slides/*.out
+slides/*.snm
+slides/*.toc
+slides/*.vrb
+
+# Credentials (none are needed; never commit any)
+.env
+*.pem
+*.key

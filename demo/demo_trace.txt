@@ -1,0 +1,41 @@
+# p5fair demo: CA18 -> TX18, n = 200, seed = 0, settings of the reported run
+
+1. Source CA18: 117,138 training and 39,256 validation persons (household split). Learned factorisation:
+   P(R)  P(X|R)  P(C|R,X)  P(E|R,X,C)  P(W|R,X,C,O)  P(O|R,X,C,E)  P(H|R,X,C,O)  P(Y|R,X,C,E,W,O,H)
+   hill-climbing moves: [('add', 'E', 'O', 7160.9), ('add', 'O', 'W', 2293.0), ('add', 'C', 'H', 2178.3), ('add', 'C', 'E', 1697.5), ('add', 'O', 'H', 1261.3), ('add', 'C', 'W', 1054.4), ('add', 'C', 'O', 562.2)]
+
+2. Exact query P(Y = 1 | R = Black, X = female, E = master's or higher):
+   variable elimination (min-fill order CWOH, peak factor 1280 entries): 0.663649
+   clique tree (1 cliques, calibration error 0.0e+00): 0.663649
+   enumeration of the 115,200-entry joint: 0.663649
+   max |difference| = 1.1e-16
+   (the outcome factor spans all eight variables, so the full network's clique tree is a single clique)
+
+   Composition sub-network, P(O | R = Black, X = female) over the 8 occupation groups:
+   VE (order EWCH):  0.1520 0.0286 0.1522 0.0806 0.2264 0.2852 0.0106 0.0644
+   clique tree (3 cliques: ['RXCEO', 'RXCWO', 'RXCOH'], calibration error 1.4e-17)
+   max |VE - clique tree| = 5.6e-17, max |VE - enumeration| = 8.3e-17
+
+3. Factor diagnostic from n = 200 labelled TX18 persons (pool = P1 + P2; test P3 untouched):
+factor             family  log_bf  p_shift  fair_impact  util_impact  impact        update
+     R              P(R|) 28.2990   1.0000       0.0000       0.0010  0.0010   global tilt
+     X             P(X|R) -0.5965   0.3551      -0.0000       0.0004  0.0001     tilt by R
+     C           P(C|R,X) -1.6392   0.1626       0.0035      -0.0034  0.0011   global tilt
+     E         P(E|R,X,C)  0.7226   0.6732      -0.0056      -0.0095  0.0102   global tilt
+     W       P(W|R,X,C,O) -2.1263   0.1066       0.0023       0.0005  0.0003   global tilt
+     O       P(O|R,X,C,E) -2.5080   0.0753       0.0016      -0.0056  0.0005     tilt by R
+     H       P(H|R,X,C,O) -1.8493   0.1360       0.0000       0.0007  0.0001     tilt by R
+     Y P(Y|R,X,C,E,W,O,H) -0.4277   0.3947       0.0088      -0.0048  0.0053 intercept + O
+
+   BN-LFA updates: E+R (at most 2, log BF > 0, ranked by P(shift) x decision impact)
+
+4. TX18 test split (27,142 persons):
+        d_eodds     ba  auroc   d_dp  d_eopp  n_eval_groups
+method                                                     
+EO-S      0.156  0.767  0.863  0.185   0.156              8
+TT        0.237  0.758  0.863  0.224   0.234              8
+IW-EO     0.166  0.771  0.863  0.198   0.166              8
+BN-all    0.184  0.759  0.859  0.183   0.184              8
+BN-LFA    0.143  0.773  0.863  0.199   0.143              8
+
+(ΔEOdds: lower is fairer; BA: higher is better; runtime 2s)

@@ -1,0 +1,14 @@
+{
+ "Folktables ACSIncome definition (rows, labels, features)": {
+  "CA18": "passed",
+  "TX18": "passed",
+  "NY18": "passed",
+  "CA19": "passed",
+  "TX19": "passed",
+  "NY19": "passed"
+ },
+ "exact inference agreement (VE 4 orders = clique tree = enumeration = pgmpy)": "passed: max abs diff 1.28e-15 (tol 1e-09) on CA18",
+ "local Markov statements of the learned graphs are d-separations": "passed",
+ "fairlearn MetricFrame cross-check of per-group TPR/FPR": "passed",
+ "self-checks (factors, inference, d-separation, metrics, Holm, splits, leakage)": "passed"
+}

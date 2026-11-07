@@ -1,0 +1,8 @@
+# SHA-256 of the ACS PUMS 1-Year person files as downloaded on 2026-10-30 and again on 2026-11-06 (identical).
+# Recorded by the notebook in results/tables/data_provenance.csv. Source: https://www2.census.gov/programs-surveys/acs/data/pums/<year>/1-Year/
+6194ade52892ddb0e41903f7d3b49399842f08eeebd42e6b19ee8e417affbf79  2018_csv_pca.zip
+4a337dd96f2b54ece03934a0125c493627abe3b6e6a4de766f96ccc802e8dfa9  2018_csv_ptx.zip
+e7ff5ef8cf81e6422a216dbb33b8d7fc9ecc4df49252cccd4e82f6784db3e80a  2018_csv_pny.zip
+118e94f8a002f26e9fbb031592ebc61555a81034c0ff632b2e3c4c9fa41fe698  2019_csv_pca.zip
+1c28122f895982e58d1c57535d26f655db4de186682f6ae753189f3a2ac20081  2019_csv_ptx.zip
+57e4797ff3d6ec36c53aec25fe0b1c124285705c3a6312a3be06fc205415fc8d  2019_csv_pny.zip

@@ -1,0 +1,25 @@
+network,check,value,pass (tol 1e-09)
+full BN,max |CPT row sum - 1|,2.220446049250313e-16,True
+full BN,|sum of joint - 1|,0.0,True
+full BN,max abs diff: VE min_degree,0.0,True
+full BN,max abs diff: VE min_weight,0.0,True
+full BN,max abs diff: VE random order,2.220446049250313e-16,True
+full BN,max abs diff: clique tree,5.551115123125783e-17,True
+full BN,max abs diff: clique-tree calibration,0.0,True
+full BN,max abs diff: enumeration,7.771561172376096e-16,True
+full BN,max abs diff: pgmpy VE,2.220446049250313e-16,True
+full BN,max abs diff: pgmpy BP,8.881784197001252e-16,True
+full BN,max abs diff: fast predict_proba,1.1102230246251565e-16,True
+full BN,max abs diff: missing-value marginalisation,2.220446049250313e-16,True
+full BN,cliques in clique tree,1.0,n/a
+composition sub-network,max |CPT row sum - 1|,2.220446049250313e-16,True
+composition sub-network,|sum of joint - 1|,0.0,True
+composition sub-network,max abs diff: VE min_degree,0.0,True
+composition sub-network,max abs diff: VE min_weight,1.1102230246251565e-16,True
+composition sub-network,max abs diff: VE random order,1.1102230246251565e-16,True
+composition sub-network,max abs diff: clique tree,1.1102230246251565e-16,True
+composition sub-network,max abs diff: clique-tree calibration,1.1102230246251565e-16,True
+composition sub-network,max abs diff: enumeration,1.27675647831893e-15,True
+composition sub-network,max abs diff: pgmpy VE,1.1102230246251565e-16,True
+composition sub-network,max abs diff: pgmpy BP,4.996003610813204e-16,True
+composition sub-network,cliques in clique tree,3.0,n/a

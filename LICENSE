@@ -1,0 +1,34 @@
+MIT License
+
+Copyright (c) 2026 Aslam Mugutkhan, Rao Ashlesha Padmananda (ICT 5143 capstone, Problem 5)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+--------------------------------------------------------------------------------------------------------------------
+The MIT licence above covers the code and documentation written for this project (the notebook, docs/, report/,
+slides/, demo/). It does not cover the data or third-party software:
+
+Data
+  U.S. Census Bureau, American Community Survey Public Use Microdata Sample, 1-Year 2018 and 2019 person files.
+  Works of the U.S. Government are not subject to copyright in the United States (17 U.S.C. § 105); cite the Census
+  Bureau as the source. Census confidentiality rules apply: do not attempt to identify any person or household.
+  This repository ships no record-level data, only acquisition code and checksums.
+
+Benchmark definition
+  Folktables ACSIncome (Ding, Hardt, Miller and Schmidt, "Retiring Adult", NeurIPS 2021), folktables package, MIT
+  licence. Used only to verify our re-implementation of the definition.
+
+Software dependencies (installed separately, each under its own licence)
+  numpy, scipy, pandas, scikit-learn, networkx (BSD-3-Clause); matplotlib (Matplotlib/PSF-style licence);
+  pgmpy (MIT); fairlearn (MIT); folktables (MIT).

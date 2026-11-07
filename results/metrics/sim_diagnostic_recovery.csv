@@ -1,0 +1,289 @@
+scenario,rep,n,selector,selected,recall,false selections,exact match
+null,0,200,LFA,-,,0,True
+null,0,200,LL,-,,0,True
+null,0,200,LFA +U,W+H,,2,False
+null,0,1000,LFA,-,,0,True
+null,0,1000,LL,-,,0,True
+null,0,1000,LFA +U,W+O,,2,False
+null,1,200,LFA,Y,,1,False
+null,1,200,LL,Y,,1,False
+null,1,200,LFA +U,H+Y,,2,False
+null,1,1000,LFA,-,,0,True
+null,1,1000,LL,-,,0,True
+null,1,1000,LFA +U,W+H,,2,False
+null,2,200,LFA,-,,0,True
+null,2,200,LL,-,,0,True
+null,2,200,LFA +U,-,,0,True
+null,2,1000,LFA,-,,0,True
+null,2,1000,LL,-,,0,True
+null,2,1000,LFA +U,O,,1,False
+null,3,200,LFA,R,,1,False
+null,3,200,LL,R,,1,False
+null,3,200,LFA +U,R,,1,False
+null,3,1000,LFA,-,,0,True
+null,3,1000,LL,-,,0,True
+null,3,1000,LFA +U,R+O,,2,False
+null,4,200,LFA,-,,0,True
+null,4,200,LL,-,,0,True
+null,4,200,LFA +U,O,,1,False
+null,4,1000,LFA,-,,0,True
+null,4,1000,LL,-,,0,True
+null,4,1000,LFA +U,O,,1,False
+null,5,200,LFA,-,,0,True
+null,5,200,LL,-,,0,True
+null,5,200,LFA +U,W,,1,False
+null,5,1000,LFA,-,,0,True
+null,5,1000,LL,-,,0,True
+null,5,1000,LFA +U,W,,1,False
+null,6,200,LFA,O,,1,False
+null,6,200,LL,O,,1,False
+null,6,200,LFA +U,W+O,,2,False
+null,6,1000,LFA,O,,1,False
+null,6,1000,LL,O,,1,False
+null,6,1000,LFA +U,W+O,,2,False
+null,7,200,LFA,Y,,1,False
+null,7,200,LL,Y,,1,False
+null,7,200,LFA +U,H+Y,,2,False
+null,7,1000,LFA,-,,0,True
+null,7,1000,LL,-,,0,True
+null,7,1000,LFA +U,H,,1,False
+demographic,0,200,LFA,R,1.0,0,True
+demographic,0,200,LL,R,1.0,0,True
+demographic,0,200,LFA +U,R+O,1.0,1,False
+demographic,0,1000,LFA,R+X,1.0,1,False
+demographic,0,1000,LL,R+X,1.0,1,False
+demographic,0,1000,LFA +U,R+O,1.0,1,False
+demographic,1,200,LFA,R+Y,1.0,1,False
+demographic,1,200,LL,R+Y,1.0,1,False
+demographic,1,200,LFA +U,O+Y,0.0,2,False
+demographic,1,1000,LFA,R,1.0,0,True
+demographic,1,1000,LL,R,1.0,0,True
+demographic,1,1000,LFA +U,O+H,0.0,2,False
+demographic,2,200,LFA,R+H,1.0,1,False
+demographic,2,200,LL,R+H,1.0,1,False
+demographic,2,200,LFA +U,R+O,1.0,1,False
+demographic,2,1000,LFA,R,1.0,0,True
+demographic,2,1000,LL,R,1.0,0,True
+demographic,2,1000,LFA +U,R+O,1.0,1,False
+demographic,3,200,LFA,R,1.0,0,True
+demographic,3,200,LL,R,1.0,0,True
+demographic,3,200,LFA +U,R+O,1.0,1,False
+demographic,3,1000,LFA,R,1.0,0,True
+demographic,3,1000,LL,R,1.0,0,True
+demographic,3,1000,LFA +U,R+O,1.0,1,False
+demographic,4,200,LFA,R,1.0,0,True
+demographic,4,200,LL,R,1.0,0,True
+demographic,4,200,LFA +U,R,1.0,0,True
+demographic,4,1000,LFA,R,1.0,0,True
+demographic,4,1000,LL,R,1.0,0,True
+demographic,4,1000,LFA +U,R+E,1.0,1,False
+demographic,5,200,LFA,R,1.0,0,True
+demographic,5,200,LL,R,1.0,0,True
+demographic,5,200,LFA +U,R+O,1.0,1,False
+demographic,5,1000,LFA,R,1.0,0,True
+demographic,5,1000,LL,R,1.0,0,True
+demographic,5,1000,LFA +U,R+O,1.0,1,False
+demographic,6,200,LFA,R+C,1.0,1,False
+demographic,6,200,LL,R+C,1.0,1,False
+demographic,6,200,LFA +U,R+O,1.0,1,False
+demographic,6,1000,LFA,R,1.0,0,True
+demographic,6,1000,LL,R,1.0,0,True
+demographic,6,1000,LFA +U,R+O,1.0,1,False
+demographic,7,200,LFA,R,1.0,0,True
+demographic,7,200,LL,R,1.0,0,True
+demographic,7,200,LFA +U,R+O,1.0,1,False
+demographic,7,1000,LFA,R,1.0,0,True
+demographic,7,1000,LL,R,1.0,0,True
+demographic,7,1000,LFA +U,R+O,1.0,1,False
+composition,0,200,LFA,-,0.0,0,False
+composition,0,200,LL,-,0.0,0,False
+composition,0,200,LFA +U,E+H,1.0,1,False
+composition,0,1000,LFA,E,1.0,0,True
+composition,0,1000,LL,E,1.0,0,True
+composition,0,1000,LFA +U,E+H,1.0,1,False
+composition,1,200,LFA,-,0.0,0,False
+composition,1,200,LL,-,0.0,0,False
+composition,1,200,LFA +U,E+H,1.0,1,False
+composition,1,1000,LFA,E,1.0,0,True
+composition,1,1000,LL,E,1.0,0,True
+composition,1,1000,LFA +U,E+H,1.0,1,False
+composition,2,200,LFA,-,0.0,0,False
+composition,2,200,LL,-,0.0,0,False
+composition,2,200,LFA +U,E+W,1.0,1,False
+composition,2,1000,LFA,-,0.0,0,False
+composition,2,1000,LL,-,0.0,0,False
+composition,2,1000,LFA +U,E+O,1.0,1,False
+composition,3,200,LFA,E,1.0,0,True
+composition,3,200,LL,E,1.0,0,True
+composition,3,200,LFA +U,E+O,1.0,1,False
+composition,3,1000,LFA,-,0.0,0,False
+composition,3,1000,LL,-,0.0,0,False
+composition,3,1000,LFA +U,E+H,1.0,1,False
+composition,4,200,LFA,-,0.0,0,False
+composition,4,200,LL,-,0.0,0,False
+composition,4,200,LFA +U,E+O,1.0,1,False
+composition,4,1000,LFA,E,1.0,0,True
+composition,4,1000,LL,E,1.0,0,True
+composition,4,1000,LFA +U,E+O,1.0,1,False
+composition,5,200,LFA,-,0.0,0,False
+composition,5,200,LL,-,0.0,0,False
+composition,5,200,LFA +U,E+O,1.0,1,False
+composition,5,1000,LFA,E,1.0,0,True
+composition,5,1000,LL,E,1.0,0,True
+composition,5,1000,LFA +U,E+O,1.0,1,False
+composition,6,200,LFA,-,0.0,0,False
+composition,6,200,LL,-,0.0,0,False
+composition,6,200,LFA +U,E,1.0,0,True
+composition,6,1000,LFA,-,0.0,0,False
+composition,6,1000,LL,-,0.0,0,False
+composition,6,1000,LFA +U,E+O,1.0,1,False
+composition,7,200,LFA,W,0.0,1,False
+composition,7,200,LL,W,0.0,1,False
+composition,7,200,LFA +U,E+O,1.0,1,False
+composition,7,1000,LFA,E,1.0,0,True
+composition,7,1000,LL,E,1.0,0,True
+composition,7,1000,LFA +U,E+O,1.0,1,False
+mechanism,0,200,LFA,W,0.0,1,False
+mechanism,0,200,LL,W,0.0,1,False
+mechanism,0,200,LFA +U,O,0.0,1,False
+mechanism,0,1000,LFA,Y,1.0,0,True
+mechanism,0,1000,LL,Y,1.0,0,True
+mechanism,0,1000,LFA +U,O+Y,1.0,1,False
+mechanism,1,200,LFA,-,0.0,0,False
+mechanism,1,200,LL,-,0.0,0,False
+mechanism,1,200,LFA +U,O,0.0,1,False
+mechanism,1,1000,LFA,O+Y,1.0,1,False
+mechanism,1,1000,LL,O+Y,1.0,1,False
+mechanism,1,1000,LFA +U,O+Y,1.0,1,False
+mechanism,2,200,LFA,-,0.0,0,False
+mechanism,2,200,LL,-,0.0,0,False
+mechanism,2,200,LFA +U,W+H,0.0,2,False
+mechanism,2,1000,LFA,Y,1.0,0,True
+mechanism,2,1000,LL,Y,1.0,0,True
+mechanism,2,1000,LFA +U,O+Y,1.0,1,False
+mechanism,3,200,LFA,-,0.0,0,False
+mechanism,3,200,LL,-,0.0,0,False
+mechanism,3,200,LFA +U,O,0.0,1,False
+mechanism,3,1000,LFA,Y,1.0,0,True
+mechanism,3,1000,LL,Y,1.0,0,True
+mechanism,3,1000,LFA +U,O+Y,1.0,1,False
+mechanism,4,200,LFA,-,0.0,0,False
+mechanism,4,200,LL,-,0.0,0,False
+mechanism,4,200,LFA +U,O+H,0.0,2,False
+mechanism,4,1000,LFA,Y,1.0,0,True
+mechanism,4,1000,LL,Y,1.0,0,True
+mechanism,4,1000,LFA +U,H+Y,1.0,1,False
+mechanism,5,200,LFA,-,0.0,0,False
+mechanism,5,200,LL,-,0.0,0,False
+mechanism,5,200,LFA +U,E+O,0.0,2,False
+mechanism,5,1000,LFA,Y,1.0,0,True
+mechanism,5,1000,LL,Y,1.0,0,True
+mechanism,5,1000,LFA +U,O+Y,1.0,1,False
+mechanism,6,200,LFA,-,0.0,0,False
+mechanism,6,200,LL,-,0.0,0,False
+mechanism,6,200,LFA +U,W,0.0,1,False
+mechanism,6,1000,LFA,Y,1.0,0,True
+mechanism,6,1000,LL,Y,1.0,0,True
+mechanism,6,1000,LFA +U,H+Y,1.0,1,False
+mechanism,7,200,LFA,-,0.0,0,False
+mechanism,7,200,LL,-,0.0,0,False
+mechanism,7,200,LFA +U,O,0.0,1,False
+mechanism,7,1000,LFA,Y,1.0,0,True
+mechanism,7,1000,LL,Y,1.0,0,True
+mechanism,7,1000,LFA +U,O+Y,1.0,1,False
+mixed,0,200,LFA,Y,0.5,0,False
+mixed,0,200,LL,Y,0.5,0,False
+mixed,0,200,LFA +U,E+Y,1.0,0,True
+mixed,0,1000,LFA,Y,0.5,0,False
+mixed,0,1000,LL,Y,0.5,0,False
+mixed,0,1000,LFA +U,E+Y,1.0,0,True
+mixed,1,200,LFA,-,0.0,0,False
+mixed,1,200,LL,-,0.0,0,False
+mixed,1,200,LFA +U,E+O,0.5,1,False
+mixed,1,1000,LFA,E+Y,1.0,0,True
+mixed,1,1000,LL,E+Y,1.0,0,True
+mixed,1,1000,LFA +U,E+Y,1.0,0,True
+mixed,2,200,LFA,Y,0.5,0,False
+mixed,2,200,LL,Y,0.5,0,False
+mixed,2,200,LFA +U,E+Y,1.0,0,True
+mixed,2,1000,LFA,E+Y,1.0,0,True
+mixed,2,1000,LL,E+Y,1.0,0,True
+mixed,2,1000,LFA +U,E+Y,1.0,0,True
+mixed,3,200,LFA,W,0.0,1,False
+mixed,3,200,LL,W,0.0,1,False
+mixed,3,200,LFA +U,E+H,0.5,1,False
+mixed,3,1000,LFA,E+Y,1.0,0,True
+mixed,3,1000,LL,E+Y,1.0,0,True
+mixed,3,1000,LFA +U,E+Y,1.0,0,True
+mixed,4,200,LFA,-,0.0,0,False
+mixed,4,200,LL,-,0.0,0,False
+mixed,4,200,LFA +U,E+H,0.5,1,False
+mixed,4,1000,LFA,E+Y,1.0,0,True
+mixed,4,1000,LL,E+Y,1.0,0,True
+mixed,4,1000,LFA +U,E+Y,1.0,0,True
+mixed,5,200,LFA,-,0.0,0,False
+mixed,5,200,LL,-,0.0,0,False
+mixed,5,200,LFA +U,E+O,0.5,1,False
+mixed,5,1000,LFA,-,0.0,0,False
+mixed,5,1000,LL,-,0.0,0,False
+mixed,5,1000,LFA +U,E+O,0.5,1,False
+mixed,6,200,LFA,-,0.0,0,False
+mixed,6,200,LL,-,0.0,0,False
+mixed,6,200,LFA +U,E+O,0.5,1,False
+mixed,6,1000,LFA,E+Y,1.0,0,True
+mixed,6,1000,LL,E+Y,1.0,0,True
+mixed,6,1000,LFA +U,E+Y,1.0,0,True
+mixed,7,200,LFA,Y,0.5,0,False
+mixed,7,200,LL,Y,0.5,0,False
+mixed,7,200,LFA +U,E+Y,1.0,0,True
+mixed,7,1000,LFA,Y,0.5,0,False
+mixed,7,1000,LL,Y,0.5,0,False
+mixed,7,1000,LFA +U,E+Y,1.0,0,True
+unselected,0,200,LFA,H,0.3333333333333333,0,False
+unselected,0,200,LL,H,0.3333333333333333,0,False
+unselected,0,200,LFA +U,E+H,0.6666666666666666,0,False
+unselected,0,1000,LFA,E+Y,0.6666666666666666,0,False
+unselected,0,1000,LL,H+Y,0.6666666666666666,0,False
+unselected,0,1000,LFA +U,E+Y,0.6666666666666666,0,False
+unselected,1,200,LFA,-,0.0,0,False
+unselected,1,200,LL,-,0.0,0,False
+unselected,1,200,LFA +U,E+H,0.6666666666666666,0,False
+unselected,1,1000,LFA,E+Y,0.6666666666666666,0,False
+unselected,1,1000,LL,H+Y,0.6666666666666666,0,False
+unselected,1,1000,LFA +U,E+Y,0.6666666666666666,0,False
+unselected,2,200,LFA,H,0.3333333333333333,0,False
+unselected,2,200,LL,H,0.3333333333333333,0,False
+unselected,2,200,LFA +U,E+H,0.6666666666666666,0,False
+unselected,2,1000,LFA,H+Y,0.6666666666666666,0,False
+unselected,2,1000,LL,H+Y,0.6666666666666666,0,False
+unselected,2,1000,LFA +U,E+H,0.6666666666666666,0,False
+unselected,3,200,LFA,-,0.0,0,False
+unselected,3,200,LL,-,0.0,0,False
+unselected,3,200,LFA +U,E+H,0.6666666666666666,0,False
+unselected,3,1000,LFA,H+Y,0.6666666666666666,0,False
+unselected,3,1000,LL,H+Y,0.6666666666666666,0,False
+unselected,3,1000,LFA +U,E+Y,0.6666666666666666,0,False
+unselected,4,200,LFA,-,0.0,0,False
+unselected,4,200,LL,-,0.0,0,False
+unselected,4,200,LFA +U,E+H,0.6666666666666666,0,False
+unselected,4,1000,LFA,E+Y,0.6666666666666666,0,False
+unselected,4,1000,LL,E+H,0.6666666666666666,0,False
+unselected,4,1000,LFA +U,E+Y,0.6666666666666666,0,False
+unselected,5,200,LFA,H,0.3333333333333333,0,False
+unselected,5,200,LL,H,0.3333333333333333,0,False
+unselected,5,200,LFA +U,E+H,0.6666666666666666,0,False
+unselected,5,1000,LFA,H+Y,0.6666666666666666,0,False
+unselected,5,1000,LL,H+Y,0.6666666666666666,0,False
+unselected,5,1000,LFA +U,E+Y,0.6666666666666666,0,False
+unselected,6,200,LFA,-,0.0,0,False
+unselected,6,200,LL,-,0.0,0,False
+unselected,6,200,LFA +U,E+H,0.6666666666666666,0,False
+unselected,6,1000,LFA,H+Y,0.6666666666666666,0,False
+unselected,6,1000,LL,H+Y,0.6666666666666666,0,False
+unselected,6,1000,LFA +U,E+Y,0.6666666666666666,0,False
+unselected,7,200,LFA,H+Y,0.6666666666666666,0,False
+unselected,7,200,LL,H+Y,0.6666666666666666,0,False
+unselected,7,200,LFA +U,E+Y,0.6666666666666666,0,False
+unselected,7,1000,LFA,E+Y,0.6666666666666666,0,False
+unselected,7,1000,LL,H+Y,0.6666666666666666,0,False
+unselected,7,1000,LFA +U,E+Y,0.6666666666666666,0,False

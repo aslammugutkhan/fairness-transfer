@@ -1,0 +1,14 @@
+# Only needed to run the notebook outside Google Colab (Colab already has the core packages; the notebook's first cell
+# installs the three cross-check packages there). These versions were tested locally (Python 3.13); the reported Colab
+# run's exact versions are in results/reproducibility.json.
+numpy==2.5.2
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.9.1
+matplotlib==3.11.1
+networkx==3.7
+# cross-checks: ACSIncome definition (folktables), exact inference (pgmpy), per-group metrics (fairlearn).
+# Each check is skipped with a message if its package is missing; the analysis itself does not need them.
+folktables==0.0.12
+pgmpy==1.1.2
+fairlearn==0.15.0

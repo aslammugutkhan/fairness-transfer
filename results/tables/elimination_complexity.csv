@@ -1,0 +1,61 @@
+source,network,query,heuristic,peak factor size,factor-entry ops,order
+CA18,composition,"P(O | R=Black, X=F)",min_fill,200,1232,EWCH
+CA18,composition,"P(O | R=Black, X=F)",min_degree,200,1232,EWCH
+CA18,composition,"P(O | R=Black, X=F)",min_weight,200,1185,WHCE
+CA18,composition,"P(O | R=Black, X=F)",random,200,880,EWHC
+CA18,composition,P(H | E=graduate),min_fill,2880,12950,WRXCO
+CA18,composition,P(H | E=graduate),min_degree,2880,12950,WRXCO
+CA18,composition,P(H | E=graduate),min_weight,2880,12950,WRXCO
+CA18,composition,P(H | E=graduate),random,11520,31986,CWOXR
+CA18,composition,P(R | O=service),min_fill,450,3006,EWXCH
+CA18,composition,P(R | O=service),min_degree,450,3006,EWXCH
+CA18,composition,P(R | O=service),min_weight,450,3330,WHXCE
+CA18,composition,P(R | O=service),random,450,2016,EWHCX
+CA18,full,"P(Y | R=Black, X=F)",min_fill,6400,19233,CEWOH
+CA18,full,"P(Y | R=Black, X=F)",min_degree,6400,19233,CEWOH
+CA18,full,"P(Y | R=Black, X=F)",min_weight,6400,19233,CEWOH
+CA18,full,"P(Y | R=Black, X=F)",random,6400,17120,WOHEC
+CA18,full,P(R | Y=1),min_fill,57600,238176,XCEWOH
+CA18,full,P(R | Y=1),min_degree,57600,238176,XCEWOH
+CA18,full,P(R | Y=1),min_weight,57600,238176,XCEWOH
+CA18,full,P(R | Y=1),random,57600,148635,EWHOXC
+TX18,composition,"P(O | R=Black, X=F)",min_fill,200,1232,EWCH
+TX18,composition,"P(O | R=Black, X=F)",min_degree,200,1232,EWCH
+TX18,composition,"P(O | R=Black, X=F)",min_weight,200,1185,WHCE
+TX18,composition,"P(O | R=Black, X=F)",random,200,880,EWHC
+TX18,composition,P(H | E=graduate),min_fill,2880,12950,WRXCO
+TX18,composition,P(H | E=graduate),min_degree,2880,12950,WRXCO
+TX18,composition,P(H | E=graduate),min_weight,2880,12950,WRXCO
+TX18,composition,P(H | E=graduate),random,11520,31986,CWOXR
+TX18,composition,P(R | O=service),min_fill,450,3006,EWXCH
+TX18,composition,P(R | O=service),min_degree,450,3006,EWXCH
+TX18,composition,P(R | O=service),min_weight,450,3330,WHXCE
+TX18,composition,P(R | O=service),random,450,2016,EWHCX
+TX18,full,"P(Y | R=Black, X=F)",min_fill,6400,19233,CEWOH
+TX18,full,"P(Y | R=Black, X=F)",min_degree,6400,19233,CEWOH
+TX18,full,"P(Y | R=Black, X=F)",min_weight,6400,19233,CEWOH
+TX18,full,"P(Y | R=Black, X=F)",random,6400,17120,WOHEC
+TX18,full,P(R | Y=1),min_fill,57600,238176,XCEWOH
+TX18,full,P(R | Y=1),min_degree,57600,238176,XCEWOH
+TX18,full,P(R | Y=1),min_weight,57600,238176,XCEWOH
+TX18,full,P(R | Y=1),random,57600,148635,EWHOXC
+NY18,composition,"P(O | R=Black, X=F)",min_fill,200,1232,EWCH
+NY18,composition,"P(O | R=Black, X=F)",min_degree,200,1232,EWCH
+NY18,composition,"P(O | R=Black, X=F)",min_weight,200,1185,WHCE
+NY18,composition,"P(O | R=Black, X=F)",random,200,880,EWHC
+NY18,composition,P(H | E=graduate),min_fill,2880,12950,WRXCO
+NY18,composition,P(H | E=graduate),min_degree,2880,12950,WRXCO
+NY18,composition,P(H | E=graduate),min_weight,2880,12950,WRXCO
+NY18,composition,P(H | E=graduate),random,11520,31986,CWOXR
+NY18,composition,P(R | O=service),min_fill,450,3006,EWXCH
+NY18,composition,P(R | O=service),min_degree,450,3006,EWXCH
+NY18,composition,P(R | O=service),min_weight,450,3330,WHXCE
+NY18,composition,P(R | O=service),random,450,2016,EWHCX
+NY18,full,"P(Y | R=Black, X=F)",min_fill,6400,19233,CEWOH
+NY18,full,"P(Y | R=Black, X=F)",min_degree,6400,19233,CEWOH
+NY18,full,"P(Y | R=Black, X=F)",min_weight,6400,19233,CEWOH
+NY18,full,"P(Y | R=Black, X=F)",random,6400,17120,WOHEC
+NY18,full,P(R | Y=1),min_fill,57600,238176,XCEWOH
+NY18,full,P(R | Y=1),min_degree,57600,238176,XCEWOH
+NY18,full,P(R | Y=1),min_weight,57600,238176,XCEWOH
+NY18,full,P(R | Y=1),random,57600,148635,EWHOXC

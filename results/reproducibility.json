@@ -1,0 +1,711 @@
+{
+ "config": {
+  "run_mode": "full",
+  "config_file": "problem5_fairness_transfer_bn.ipynb",
+  "data_source": "acs_pums",
+  "states": [
+   "CA",
+   "TX",
+   "NY"
+  ],
+  "years": [
+   2018,
+   2019
+  ],
+  "income_threshold": 50000,
+  "split_fracs": [
+   0.6,
+   0.2,
+   0.2
+  ],
+  "split_seed": 5143,
+  "pairs": [
+   [
+    "CA18",
+    "TX18"
+   ],
+   [
+    "CA18",
+    "NY18"
+   ],
+   [
+    "TX18",
+    "CA18"
+   ],
+   [
+    "TX18",
+    "NY18"
+   ],
+   [
+    "NY18",
+    "CA18"
+   ],
+   [
+    "NY18",
+    "TX18"
+   ],
+   [
+    "CA18",
+    "CA19"
+   ],
+   [
+    "TX18",
+    "TX19"
+   ],
+   [
+    "NY18",
+    "NY19"
+   ]
+  ],
+  "tiers": {
+   "R": 0,
+   "X": 0,
+   "C": 1,
+   "E": 2,
+   "W": 3,
+   "O": 3,
+   "H": 4,
+   "Y": 5
+  },
+  "within_tier_allowed": [
+   [
+    "W",
+    "O"
+   ],
+   [
+    "O",
+    "W"
+   ]
+  ],
+  "required_edges": [
+   [
+    "R",
+    "X"
+   ],
+   [
+    "R",
+    "C"
+   ],
+   [
+    "R",
+    "E"
+   ],
+   [
+    "R",
+    "W"
+   ],
+   [
+    "R",
+    "O"
+   ],
+   [
+    "R",
+    "H"
+   ],
+   [
+    "X",
+    "C"
+   ],
+   [
+    "X",
+    "E"
+   ],
+   [
+    "X",
+    "W"
+   ],
+   [
+    "X",
+    "O"
+   ],
+   [
+    "X",
+    "H"
+   ]
+  ],
+  "max_indegree": 4,
+  "structure_score": "heldout",
+  "alpha0": 2.0,
+  "alpha_race": 10.0,
+  "outcome_l2_C": 1.0,
+  "inference_check_domain": "CA18",
+  "inference_queries": 20,
+  "inference_tol": 1e-09,
+  "delta_ba": 0.02,
+  "min_eval": 100,
+  "min_eval_secondary": 30,
+  "min_fit": 20,
+  "max_factors": 2,
+  "tilt_sigma": 1.0,
+  "alpha_grid": [
+   1,
+   3,
+   10,
+   30,
+   100,
+   300,
+   1000,
+   3000,
+   10000
+  ],
+  "glm_sigma": 0.5,
+  "lfa_weight_cap_quantile": 0.995,
+  "iw_source_rows": 30000,
+  "iw_domain_C": 0.1,
+  "iw_weight_cap_quantile": 0.99,
+  "retrain_C_grid": [
+   0.1,
+   1.0,
+   10.0
+  ],
+  "cv_folds": 3,
+  "gbt_t_params": {
+   "n_estimators": 100,
+   "max_depth": 3,
+   "learning_rate": 0.1,
+   "subsample": 0.8
+  },
+  "hgb_params": {
+   "max_iter": 200,
+   "learning_rate": 0.1,
+   "max_leaf_nodes": 31,
+   "min_samples_leaf": 20,
+   "l2_regularization": 1.0,
+   "early_stopping": false
+  },
+  "budgets": [
+   0,
+   100,
+   200,
+   500,
+   1000,
+   2000
+  ],
+  "confirmatory_budgets": [
+   200,
+   1000
+  ],
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "seeds_other": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "unlabeled_pool": 5000,
+  "sim_reps": 8,
+  "sim_budgets": [
+   200,
+   1000
+  ],
+  "sim_sizes": {
+   "source_train": 30000,
+   "source_val": 10000,
+   "target_pool": 20000
+  },
+  "sim_base_domain": "CA18",
+  "sim_demographic_from": "TX18",
+  "sim_composition_tilt": -0.6,
+  "sim_composition_races": [
+   1,
+   7
+  ],
+  "sim_mechanism_low": -1.0,
+  "sim_mechanism_high": 0.3,
+  "sim_unselected_tilt": -0.5,
+  "sim_min_mass": 0.003,
+  "robust_budgets": [
+   200,
+   1000
+  ],
+  "robust_seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "robust_schemes": [
+   "coarse",
+   "fine"
+  ],
+  "robust_pooled": [
+   [
+    "CA18",
+    "TX18",
+    "NY18"
+   ],
+   [
+    "CA18",
+    "NY18",
+    "TX18"
+   ],
+   [
+    "TX18",
+    "NY18",
+    "CA18"
+   ]
+  ],
+  "tradeoff_pairs": [
+   [
+    "CA18",
+    "TX18"
+   ],
+   [
+    "TX18",
+    "CA18"
+   ]
+  ],
+  "tradeoff_deltas": [
+   0.0,
+   0.005,
+   0.01,
+   0.02,
+   0.03,
+   0.05,
+   0.08
+  ],
+  "tradeoff_seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "n_boot": 2000,
+  "holm_alpha": 0.05,
+  "domains": [
+   "CA18",
+   "TX18",
+   "NY18",
+   "CA19",
+   "TX19",
+   "NY19"
+  ],
+  "sources": [
+   "CA18",
+   "TX18",
+   "NY18"
+  ],
+  "config_sha256": "51b7c6eb74359c9c"
+ },
+ "versions": {
+  "python": "3.13.18",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "cpu_count": 2,
+  "numpy": "2.4.6",
+  "pandas": "2.2.3",
+  "scipy": "1.16.3",
+  "sklearn": "1.6.1",
+  "matplotlib": "3.10.0",
+  "networkx": "3.7",
+  "pgmpy": "1.1.2",
+  "folktables": "0.0.12",
+  "fairlearn": "0.15.0"
+ },
+ "data_version": "ACS PUMS 1-Year person files; sha256 of zip sha256s = 214f2f937545e885",
+ "runtime_min": 12.7,
+ "data_provenance": {
+  "CA18": {
+   "domain": "CA18",
+   "source_url": "https://www2.census.gov/programs-surveys/acs/data/pums/2018/1-Year/csv_pca.zip",
+   "zip_member": "psam_p06.csv",
+   "zip_bytes": 67233615,
+   "zip_sha256": "6194ade52892ddb0e41903f7d3b49399842f08eeebd42e6b19ee8e417affbf79",
+   "accessed_utc": "2026-11-06T16:27:15Z",
+   "rows_person_file": 378817,
+   "rows_acsincome": 195665,
+   "households_acsincome": 111426,
+   "filter": "AGEP>16 & PINCP>100 & WKHP>0 & PWGTP>=1",
+   "target": "PINCP > 50000",
+   "relp": "RELP",
+   "folktables_rows": 195665,
+   "rows_match": true,
+   "labels_match": true,
+   "features_match": true,
+   "folktables_threshold": "PINCP > 50000",
+   "folktables_check": "passed"
+  },
+  "TX18": {
+   "domain": "TX18",
+   "source_url": "https://www2.census.gov/programs-surveys/acs/data/pums/2018/1-Year/csv_ptx.zip",
+   "zip_member": "psam_p48.csv",
+   "zip_bytes": 47257733,
+   "zip_sha256": "4a337dd96f2b54ece03934a0125c493627abe3b6e6a4de766f96ccc802e8dfa9",
+   "accessed_utc": "2026-11-06T16:27:25Z",
+   "rows_person_file": 268100,
+   "rows_acsincome": 135924,
+   "households_acsincome": 83087,
+   "filter": "AGEP>16 & PINCP>100 & WKHP>0 & PWGTP>=1",
+   "target": "PINCP > 50000",
+   "relp": "RELP",
+   "folktables_rows": 135924,
+   "rows_match": true,
+   "labels_match": true,
+   "features_match": true,
+   "folktables_threshold": "PINCP > 50000",
+   "folktables_check": "passed"
+  },
+  "NY18": {
+   "domain": "NY18",
+   "source_url": "https://www2.census.gov/programs-surveys/acs/data/pums/2018/1-Year/csv_pny.zip",
+   "zip_member": "psam_p36.csv",
+   "zip_bytes": 34958982,
+   "zip_sha256": "e7ff5ef8cf81e6422a216dbb33b8d7fc9ecc4df49252cccd4e82f6784db3e80a",
+   "accessed_utc": "2026-11-06T16:27:31Z",
+   "rows_person_file": 196967,
+   "rows_acsincome": 103021,
+   "households_acsincome": 60916,
+   "filter": "AGEP>16 & PINCP>100 & WKHP>0 & PWGTP>=1",
+   "target": "PINCP > 50000",
+   "relp": "RELP",
+   "folktables_rows": 103021,
+   "rows_match": true,
+   "labels_match": true,
+   "features_match": true,
+   "folktables_threshold": "PINCP > 50000",
+   "folktables_check": "passed"
+  },
+  "CA19": {
+   "domain": "CA19",
+   "source_url": "https://www2.census.gov/programs-surveys/acs/data/pums/2019/1-Year/csv_pca.zip",
+   "zip_member": "psam_p06.csv",
+   "zip_bytes": 67594033,
+   "zip_sha256": "118e94f8a002f26e9fbb031592ebc61555a81034c0ff632b2e3c4c9fa41fe698",
+   "accessed_utc": "2026-11-06T16:27:39Z",
+   "rows_person_file": 380091,
+   "rows_acsincome": 197193,
+   "households_acsincome": 111639,
+   "filter": "AGEP>16 & PINCP>100 & WKHP>0 & PWGTP>=1",
+   "target": "PINCP > 50000",
+   "relp": "RELSHIPP aliased as RELP (2019 rename; recoded; unused by models)",
+   "folktables_rows": 197193,
+   "rows_match": true,
+   "labels_match": true,
+   "features_match": true,
+   "folktables_threshold": "PINCP > 50000",
+   "folktables_check": "passed"
+  },
+  "TX19": {
+   "domain": "TX19",
+   "source_url": "https://www2.census.gov/programs-surveys/acs/data/pums/2019/1-Year/csv_ptx.zip",
+   "zip_member": "psam_p48.csv",
+   "zip_bytes": 48078887,
+   "zip_sha256": "1c28122f895982e58d1c57535d26f655db4de186682f6ae753189f3a2ac20081",
+   "accessed_utc": "2026-11-06T16:27:48Z",
+   "rows_person_file": 272776,
+   "rows_acsincome": 138293,
+   "households_acsincome": 84469,
+   "filter": "AGEP>16 & PINCP>100 & WKHP>0 & PWGTP>=1",
+   "target": "PINCP > 50000",
+   "relp": "RELSHIPP aliased as RELP (2019 rename; recoded; unused by models)",
+   "folktables_rows": 138293,
+   "rows_match": true,
+   "labels_match": true,
+   "features_match": true,
+   "folktables_threshold": "PINCP > 50000",
+   "folktables_check": "passed"
+  },
+  "NY19": {
+   "domain": "NY19",
+   "source_url": "https://www2.census.gov/programs-surveys/acs/data/pums/2019/1-Year/csv_pny.zip",
+   "zip_member": "psam_p36.csv",
+   "zip_bytes": 35284078,
+   "zip_sha256": "57e4797ff3d6ec36c53aec25fe0b1c124285705c3a6312a3be06fc205415fc8d",
+   "accessed_utc": "2026-11-06T16:27:53Z",
+   "rows_person_file": 198788,
+   "rows_acsincome": 104330,
+   "households_acsincome": 61292,
+   "filter": "AGEP>16 & PINCP>100 & WKHP>0 & PWGTP>=1",
+   "target": "PINCP > 50000",
+   "relp": "RELSHIPP aliased as RELP (2019 rename; recoded; unused by models)",
+   "folktables_rows": 104330,
+   "rows_match": true,
+   "labels_match": true,
+   "features_match": true,
+   "folktables_threshold": "PINCP > 50000",
+   "folktables_check": "passed"
+  }
+ },
+ "structures": {
+  "CA18": {
+   "R": [],
+   "X": [
+    "R"
+   ],
+   "C": [
+    "R",
+    "X"
+   ],
+   "E": [
+    "R",
+    "X",
+    "C"
+   ],
+   "W": [
+    "R",
+    "X",
+    "C",
+    "O"
+   ],
+   "O": [
+    "R",
+    "X",
+    "C",
+    "E"
+   ],
+   "H": [
+    "R",
+    "X",
+    "C",
+    "O"
+   ],
+   "Y": [
+    "R",
+    "X",
+    "C",
+    "E",
+    "W",
+    "O",
+    "H"
+   ]
+  },
+  "TX18": {
+   "R": [],
+   "X": [
+    "R"
+   ],
+   "C": [
+    "R",
+    "X"
+   ],
+   "E": [
+    "R",
+    "X",
+    "C"
+   ],
+   "W": [
+    "R",
+    "X",
+    "C",
+    "O"
+   ],
+   "O": [
+    "R",
+    "X",
+    "C",
+    "E"
+   ],
+   "H": [
+    "R",
+    "X",
+    "C",
+    "O"
+   ],
+   "Y": [
+    "R",
+    "X",
+    "C",
+    "E",
+    "W",
+    "O",
+    "H"
+   ]
+  },
+  "NY18": {
+   "R": [],
+   "X": [
+    "R"
+   ],
+   "C": [
+    "R",
+    "X"
+   ],
+   "E": [
+    "R",
+    "X",
+    "C"
+   ],
+   "W": [
+    "R",
+    "X",
+    "C",
+    "O"
+   ],
+   "O": [
+    "R",
+    "X",
+    "C",
+    "E"
+   ],
+   "H": [
+    "R",
+    "X",
+    "C",
+    "O"
+   ],
+   "Y": [
+    "R",
+    "X",
+    "C",
+    "E",
+    "W",
+    "O",
+    "H"
+   ]
+  },
+  "CA19": {
+   "R": [],
+   "X": [
+    "R"
+   ],
+   "C": [
+    "R",
+    "X"
+   ],
+   "E": [
+    "R",
+    "X",
+    "C"
+   ],
+   "W": [
+    "R",
+    "X",
+    "C",
+    "O"
+   ],
+   "O": [
+    "R",
+    "X",
+    "C",
+    "E"
+   ],
+   "H": [
+    "R",
+    "X",
+    "C",
+    "O"
+   ],
+   "Y": [
+    "R",
+    "X",
+    "C",
+    "E",
+    "W",
+    "O",
+    "H"
+   ]
+  },
+  "TX19": {
+   "R": [],
+   "X": [
+    "R"
+   ],
+   "C": [
+    "R",
+    "X"
+   ],
+   "E": [
+    "R",
+    "X",
+    "C"
+   ],
+   "W": [
+    "R",
+    "X",
+    "C",
+    "O"
+   ],
+   "O": [
+    "R",
+    "X",
+    "C",
+    "E"
+   ],
+   "H": [
+    "R",
+    "X",
+    "C",
+    "O"
+   ],
+   "Y": [
+    "R",
+    "X",
+    "C",
+    "E",
+    "W",
+    "O",
+    "H"
+   ]
+  },
+  "NY19": {
+   "R": [],
+   "X": [
+    "R"
+   ],
+   "C": [
+    "R",
+    "X"
+   ],
+   "E": [
+    "R",
+    "X",
+    "C"
+   ],
+   "W": [
+    "R",
+    "X",
+    "C",
+    "O"
+   ],
+   "O": [
+    "R",
+    "X",
+    "C",
+    "E"
+   ],
+   "H": [
+    "R",
+    "X",
+    "C",
+    "O"
+   ],
+   "Y": [
+    "R",
+    "X",
+    "C",
+    "E",
+    "W",
+    "O",
+    "H"
+   ]
+  }
+ },
+ "validation_checks": {
+  "Folktables ACSIncome definition (rows, labels, features)": {
+   "CA18": "passed",
+   "TX18": "passed",
+   "NY18": "passed",
+   "CA19": "passed",
+   "TX19": "passed",
+   "NY19": "passed"
+  },
+  "exact inference agreement (VE 4 orders = clique tree = enumeration = pgmpy)": "passed: max abs diff 1.28e-15 (tol 1e-09) on CA18",
+  "local Markov statements of the learned graphs are d-separations": "passed",
+  "fairlearn MetricFrame cross-check of per-group TPR/FPR": "passed",
+  "self-checks (factors, inference, d-separation, metrics, Holm, splits, leakage)": "passed"
+ },
+ "failed_configurations": [],
+ "threshold_selection_events": {
+  "no equalised point within delta: best-BA point used": 244,
+  "fewer than 2 supported groups: fallback thresholds kept": 163,
+  "fewer than 2 supported groups: pooled threshold": 120
+ }
+}
