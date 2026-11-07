@@ -3,7 +3,8 @@
 ICT 5143 capstone (Algorithms, Fairness and Graphical Models Laboratory) · **Problem 5: Fairness Transfer across States
 and Years with Bayesian Networks**
 
-All code is in one notebook: [problem5_fairness_transfer_bn.ipynb](problem5_fairness_transfer_bn.ipynb). Part 1
+Repository: <https://github.com/aslammugutkhan/fairness-transfer>. All code is in one notebook:
+[problem5_fairness_transfer_bn.ipynb](problem5_fairness_transfer_bn.ipynb). Part 1
 defines the code, Part 2 runs every experiment and writes `results/`.
 
 ## 1. Identity and task
