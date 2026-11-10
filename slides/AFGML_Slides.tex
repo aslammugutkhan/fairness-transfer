@@ -23,7 +23,7 @@
 
 % Slide 2: 50 seconds.
 \begin{frame}{Research question and decision context}
-\begin{itemize}
+\begin{itemize}[<+->]
 \item A classifier made fair in one state or year is deployed in another.
 \item $Y=1$: income $>$ \$50k (ACSIncome). $D=1$: high-income prediction (a benchmark, not merit).
 \item \textbf{Question:} with only 200 or 1,000 target labels, does updating $\le 2$ Bayesian-network factors keep
@@ -35,7 +35,7 @@ equalized odds better than global adaptation?
 
 % Slide 3: 50 seconds.
 \begin{frame}{Closest work and proposed contribution}
-\begin{itemize}
+\begin{itemize}[<+->]
 \item Fairness breaks under distribution shift (Ding et al.\ 2021; Shao et al.\ 2024).
 \item Covariate reweighting assumes $P(Y\mid X)$ stays fixed (Singh et al.\ 2021). Reproduced as \textbf{IW-EO}.
 \item Closest idea: Schrouff et al.\ (2022) \emph{diagnose} transfer failures with a graph, but do not repair them.
@@ -46,7 +46,7 @@ fair thresholds.
 
 % Slide 4: 60 seconds.
 \begin{frame}{Data and evaluation population}
-\begin{itemize}
+\begin{itemize}[<+->]
 \item ACS PUMS 1-Year, CA, TX, NY $\times$ 2018, 2019: six domains (Folktables check passed).
 \item 18 groups: recorded race $\times$ sex. Split by household: 60 / 20 / 20\,\%.
 \item Target labels come only from the train + validation pool; the test split only evaluates.
@@ -58,7 +58,7 @@ persons & 195{,}665 & 135{,}924 & 103{,}021 & 197{,}193 & 138{,}293 & 104{,}330\
 groups $\ge$100 pos./neg.\ (test) & 10 & 8 & 7 & 10 & 8 & 8\\\bottomrule
 \end{tabular}
 \end{center}
-\begin{itemize}
+\begin{itemize}[<+->]
 \item Small groups (American Indian, Alaska Native, Pacific Islander) are reported, but only as exploratory.
 \end{itemize}
 \end{frame}
@@ -72,7 +72,7 @@ groups $\ge$100 pos./neg.\ (test) & 10 & 8 & 7 & 10 & 8 & 8\\\bottomrule
 \end{column}
 \begin{column}{0.48\textwidth}
 \small
-\begin{itemize}
+\begin{itemize}[<+->]
 \item All 8 variables observed; the graph is associational.
 \item Composition: $P(v\mid R,X,\mathrm{pa}'(v))$, Dirichlet-smoothed.
 \item Outcome: log-linear $P(Y\mid \text{all features})$.
@@ -85,7 +85,7 @@ groups $\ge$100 pos./neg.\ (test) & 10 & 8 & 7 & 10 & 8 & 8\\\bottomrule
 
 % Slide 6: 60 seconds. Student 2 starts.
 \begin{frame}{Fairness criterion and proposed method}
-\begin{itemize}
+\begin{itemize}[<+->]
 \item \textbf{Fairness:} $\EO = \max(\text{TPR gap}, \text{FPR gap})$ across groups. Errors should not depend on the
 group, given the true label.
 \item \textbf{Utility:} balanced accuracy; at most 0.02 loss allowed.
@@ -98,7 +98,7 @@ the top $\le 2$ factors.
 
 % Slide 7: 60 seconds.
 \begin{frame}{Experimental protocol}
-\begin{itemize}
+\begin{itemize}[<+->]
 \item \textbf{Baselines:} LR, GBT, reweighing, EO-S (keep source rule), TT (target thresholds), IW-EO, retraining,
 BN-S, BN-all.
 \item Every method gets the same $n$ target persons. Test labels are never used for fitting.
@@ -135,7 +135,7 @@ IW-EO or the unchanged source rule.
 % Slide 9: 60 seconds.
 \begin{frame}{Ablation, robustness and failure case}
 \small
-\begin{itemize}
+\begin{itemize}[<+->]
 \item \textbf{Ablation} ($n=1000$): random factors 0.152 and all factors 0.147, vs BN-LFA 0.140.
 \item \textbf{Mechanism:} the diagnostic predicts the fairness change (Spearman 0.88).
 \item \textbf{Failure:} three shifted factors but only two allowed: no better than EO-S (0.187 vs 0.184).
@@ -148,14 +148,12 @@ IW-EO or the unchanged source rule.
 
 % Slide 10: 60 seconds. Total suggested main talk: 10 minutes.
 \begin{frame}{Conclusion and reproducibility}
-\begin{itemize}
+\begin{itemize}[<+->]
 \item \textbf{Conclusion:} with few labels, adapting $\le 2$ factors beats refitting thresholds, but gives no reliable
 gain over reweighting or no adaptation.
 \item \textbf{Limits:} associational graph; 3 states, 2 years; small groups; the \$50k label; race and sex used at
 decision time.
 \item \textbf{Reproduce:} \texttt{github.com/aslammugutkhan/fairness-transfer} (commit \texttt{44cd0a4}): \emph{Run all} in the notebook on Colab (13 min).
-\item \textbf{Aslam Mugutkhan:} \fillin{contribution and verification}.
-\item \textbf{Rao Ashlesha Padmananda:} \fillin{contribution and verification}.
 \end{itemize}
 \end{frame}
 

@@ -3,7 +3,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,amsmath,amssymb,booktabs,tabularx,xcolor,graphicx}
 \usepackage[hidelinks]{hyperref}
-\usepackage{enumitem}
+\usepackage{enumitem,multicol,titlesec}
+\titlespacing*{\section}{0pt}{8pt plus 2pt}{3pt}
 \setlist{nosep,leftmargin=*}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{4pt}
@@ -17,7 +18,7 @@
 \begin{center}
 {\Large\bfseries \ProjectTitle}\\[4pt]
 ICT 5143: Algorithms Fairness and Graphical Models Laboratory\\
-Problem 5; Team \fillin{ID}\\
+Problem 5; Team 5\\
 Aslam Mugutkhan, 261090830010; Rao Ashlesha Padmananda, 261090830019\\
 {\small Repository: \url{https://github.com/aslammugutkhan/fairness-transfer}\\
 Submission commit: \texttt{44cd0a4}; Date: 07/11/26}
@@ -33,7 +34,8 @@ clearly than keeping the source rule.
 
 \section{Question, context and contribution}
 A classifier made fair in one state or year is often deployed in another; fairness under distribution shift is
-established research~\cite{shao}. Task: Folktables ACSIncome~\cite{ding}, $Y=1$ if annual income exceeds \$50{,}000;
+established research~\cite{shao}, with transferability bounds~\cite{chen} and guarantees under demographic
+shift~\cite{giguere}. Task: Folktables ACSIncome~\cite{ding}, $Y=1$ if annual income exceeds \$50{,}000;
 $D=1$ is a high-income prediction (a benchmark classification, not merit or need). Stakeholders are the people in the
 census data and the developers and auditors of transferred models. A Bayesian network (BN) localises a shift to the
 factors whose tables change (the domain $S$ becomes their extra parent~\cite{pearl}).\\
@@ -44,7 +46,9 @@ most 0.02 balanced accuracy (BA)?\\
 refuted for a comparator if the Holm-adjusted paired household-bootstrap test shows no reduction.\\
 \textbf{Closest work:} Schrouff et al.~\cite{schrouff} diagnose fairness-transfer failures with a graph but do not
 repair them. We reproduce covariate-shift correction~\cite{shimodaira,singh,rezaei} as IW-EO and threshold
-post-processing~\cite{hardt} as EO-S/TT; sixteen papers are compared in \texttt{docs/related\_work.md}.
+post-processing~\cite{hardt} as EO-S/TT. Fairness constraints in training~\cite{agarwal}, graph-based transport of
+predictors~\cite{subbaswamy,magliacane} and target- or label-shift correction~\cite{zhang,lipton} address related
+problems without a label-budgeted, factor-local repair.
 
 \section{Data, graphical model and fairness method}
 \textbf{Data and estimand:} ACS PUMS 1-Year person files~\cite{census}, CA, TX, NY, 2018 and 2019, filtered exactly as
@@ -60,7 +64,7 @@ P(V)=P(R)\,P(X\mid R)\!\!\prod_{v\in\{C,E,W,O,H\}}\!\!P(v\mid R,X,\mathrm{pa}'(v
 \]
 $\mathrm{pa}'(E)=\{C\}$, $\mathrm{pa}'(O)=\{C,E\}$, $\mathrm{pa}'(W)=\mathrm{pa}'(H)=\{C,O\}$; smoothed Dirichlet CPTs and
 a log-linear outcome CPD tabulated over 57{,}600 configurations. The audit query $P(G{=}g,\mathrm{pa}(Y),Y)$ gives the
-model-implied group TPR/FPR of any rule; variable elimination (four orders), a clique tree, enumeration and pgmpy agree
+model-implied group TPR/FPR of any rule; variable elimination (four orders), a clique tree~\cite{koller}, enumeration and pgmpy agree
 to $1.3\times10^{-15}$ (tolerance $10^{-9}$).\\
 \textbf{Method and fairness:} BN-LFA scores every factor by a Bayes factor of ``shifted'' (averaged over tilt and
 Dirichlet families) and by the exact change of the source rule's gap and BA if only that factor is updated, updates the
@@ -72,8 +76,8 @@ group given the true label; demographic parity and calibration are audits. Utili
 and sex are used at prediction time (features and group thresholds).
 
 \section{Evaluation protocol}
-Baselines: LR-S and GBT-S (source models), reweighing (RW-S), source EO post-processing (EO-S), target threshold
-adjustment (TT), importance-weighted EO (IW-EO), target retraining (LR-T, GBT-T), source BN (BN-S) and all factors
+Baselines: LR-S and GBT-S (source models), reweighing (RW-S)~\cite{kamiran}, source EO post-processing
+(EO-S)~\cite{hardt}, target threshold adjustment (TT), importance-weighted EO (IW-EO)~\cite{shimodaira}, target retraining (LR-T, GBT-T), source BN (BN-S) and all factors
 updated (BN-all). Ablations: random factors, no decision impact (BN-LL), all factors, Dirichlet-only updates. All methods
 in a run get the same $n\in\{0,100,200,500,1000,2000\}$ persons from the target's train+validation pool; the target
 test split is used only for evaluation (shuffling its labels leaves every decision unchanged). Thresholds come from one
@@ -142,25 +146,44 @@ about 30 min on a 4-core laptop); settings: its \texttt{CFG} cell; versions in
 \texttt{results/reproducibility.json}; headline table: \texttt{results/metrics/confirmatory\_tests\_holm.csv}.\\
 \textbf{Aslam Mugutkhan}: \fillin{implementation/analysis artifacts and verification}.\\
 \textbf{Rao Ashlesha Padmananda}: \fillin{implementation/analysis artifacts and verification}.\\
-\textbf{Evidence:} \texttt{docs/requirements\_matrix.md}, \texttt{results/}.
+\textbf{Evidence:} \texttt{results/}; requirements matrix and full related-work comparison in \texttt{docs/}.
 
-\begin{thebibliography}{9}\footnotesize\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
-\bibitem{schrouff} J.~Schrouff, N.~Harris, S.~Koyejo et al. Diagnosing failures of fairness transfer across distribution
-shift in real-world medical settings. NeurIPS 35, 2022.
-\bibitem{census} U.S. Census Bureau. American Community Survey 1-Year PUMS, 2018 and 2019 person files.
-\url{https://www2.census.gov/programs-surveys/acs/data/pums/}, accessed 30 Oct and 6 Nov 2026.
-\bibitem{ding} F.~Ding, M.~Hardt, J.~Miller, L.~Schmidt. Retiring Adult: New datasets for fair machine learning.
+\begin{multicols}{2}\footnotesize
+\begin{thebibliography}{99}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
+\bibitem{shao} M.~Shao et al. Supervised algorithmic fairness in distribution shifts:
+A survey. IJCAI 2024, 8225--8233.
+\bibitem{chen} Y.~Chen et al. Fairness transferability subject to bounded distribution shift.
+NeurIPS 35, 2022.
+\bibitem{giguere} S.~Giguere et al. Fairness guarantees
+under demographic shift. ICLR 2022.
+\bibitem{ding} F.~Ding et al. Retiring Adult: New datasets for fair machine learning.
 NeurIPS 34, 2021. arXiv:2108.04884.
-\bibitem{hardt} M.~Hardt, E.~Price, N.~Srebro. Equality of opportunity in supervised learning. NeurIPS 29, 2016.
 \bibitem{pearl} J.~Pearl, E.~Bareinboim. Transportability of causal and statistical relations: A formal approach. AAAI
 2011, 247--254.
+\bibitem{schrouff} J.~Schrouff et al. Diagnosing failures of fairness transfer across distribution
+shift in real-world medical settings. NeurIPS 35, 2022.
 \bibitem{shimodaira} H.~Shimodaira. Improving predictive inference under covariate shift by weighting the
 log-likelihood function. J.\ Stat.\ Planning and Inference 90(2):227--244, 2000.
-\bibitem{singh} H.~Singh, R.~Singh, V.~Mhasawade, R.~Chunara. Fairness violations and mitigation under covariate shift.
+\bibitem{singh} H.~Singh et al. Fairness violations and mitigation under covariate shift.
 FAccT 2021.
-\bibitem{rezaei} A.~Rezaei, A.~Liu, O.~Memarrast, B.~D.~Ziebart. Robust fairness under covariate shift. AAAI
+\bibitem{rezaei} A.~Rezaei et al. Robust fairness under covariate shift. AAAI
 35(11):9419--9427, 2021.
-\bibitem{shao} M.~Shao, D.~Li, C.~Zhao, X.~Wu, Y.~Lin, Q.~Tian. Supervised algorithmic fairness in distribution shifts:
-A survey. IJCAI 2024, 8225--8233.
+\bibitem{hardt} M.~Hardt, E.~Price, N.~Srebro. Equality of opportunity in supervised learning. NeurIPS 29, 2016.
+\bibitem{agarwal} A.~Agarwal et al. A reductions approach to fair
+classification. ICML 2018, PMLR 80:60--69.
+\bibitem{subbaswamy} A.~Subbaswamy, P.~Schulam, S.~Saria. Preventing failures due to dataset shift: Learning
+predictive models that transport. AISTATS 2019, PMLR 89:3118--3127.
+\bibitem{magliacane} S.~Magliacane et al. Domain adaptation
+by using causal inference to predict invariant conditional distributions. NeurIPS 31, 2018.
+\bibitem{zhang} K.~Zhang et al. Domain adaptation under target and conditional shift.
+ICML 2013, PMLR 28(3):819--827.
+\bibitem{lipton} Z.~C.~Lipton, Y.-X.~Wang, A.~Smola. Detecting and correcting for label shift with black box
+predictors. ICML 2018, PMLR 80:3122--3130.
+\bibitem{census} U.S. Census Bureau. American Community Survey 1-Year PUMS, 2018 and 2019 person files.
+www2.census.gov/programs-surveys/acs/data/pums, accessed Nov 2026.
+\bibitem{koller} D.~Koller, N.~Friedman. Probabilistic Graphical Models: Principles and Techniques. MIT Press, 2009.
+\bibitem{kamiran} F.~Kamiran, T.~Calders. Data preprocessing techniques for classification without discrimination.
+Knowledge and Information Systems 33(1):1--33, 2012.
 \end{thebibliography}
+\end{multicols}
 \end{document}
