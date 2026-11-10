@@ -138,7 +138,6 @@ d-separation, metric edge cases, Holm, household splits, and a leakage check tha
 | [report/AFGML_Report.pdf](report/AFGML_Report.pdf) | 3-page report (source `report/AFGML_Report.tex`) |
 | [slides/AFGML_Slides.pdf](slides/AFGML_Slides.pdf) | 10 + 3 Beamer slides (source `slides/AFGML_Slides.tex`) |
 | [demo/README.md](demo/README.md) | demonstration and saved trace |
-| Manuscript (8–10 pages) | editable draft: <https://claude.ai/artifact/NLUw8rk13vDvPgB7cWWczL> |
 
 ## 7. Contributions and attribution
 
